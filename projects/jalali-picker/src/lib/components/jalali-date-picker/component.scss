@@ -1,0 +1,176 @@
+/*
+* @Author: Amir Ajorloo
+* @Date:   2018-11-22 14:22:10
+* @Last Modified by:   Amir Ajorloo
+* @Last Modified time: 2018-11-30 14:43:58
+*/
+
+$primaryColor : #49B4AF;
+
+$mainBackgroundColor: #F3F6F6;
+$liteBackgroundColor: #FFFFFF;
+
+$primaryTextColor : #677682;
+$secondaryTextColor : #757575;
+$tertiaryTextColor : #9E9E9E;
+$fourthTextColor : #C6C6D0;
+$liteTextColor: #FFFFFF;
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.left {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  background-color: $primaryColor;
+  direction: rtl;
+  .title
+  {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: right;
+    direction: rtl;
+    white-space: pre-line;
+
+  }
+}
+
+.datePickerBox
+{
+  width: 25rem;
+  -webkit-transition: all 0.4s ease;
+     -moz-transition: all 0.4s ease;
+       -o-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+
+  // min-height: 400px;
+  background-color: #FFFFFF;
+  .containerBox
+  {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+  .buttonBox
+  {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    
+    &.padding
+    {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+
+    .button
+    {
+      margin-left: 0.6rem;
+      margin-right: 0.6rem;
+      color: $primaryColor;
+      mat-icon
+      {
+        color: $primaryColor;
+      }
+      &.gray
+      {
+        color: $primaryTextColor;
+      }
+    }
+    .title
+    {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      color: $primaryColor;
+      span
+      {
+        cursor: pointer;
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+      }
+    }
+  }
+
+  .top {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $primaryColor;
+    margin-bottom: 0.6rem;
+    .title
+    {
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-align: right;
+      direction: rtl;
+
+    }
+  }
+
+
+  table
+  {
+    width: 100%;
+    direction: rtl;
+    margin-bottom: 0.7rem;
+    tr
+    {
+      th
+      {
+        text-align: center;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        color: $primaryTextColor;
+      }
+      td
+      {
+        text-align: center;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        span
+        {
+          width: 2rem;
+          height: 2rem;
+          line-height: 2.35rem;
+          color: $primaryTextColor;
+          display: block;
+          border-radius: 50%;
+          background-color: #FFFFFF;
+          border: 1px solid transparent;
+          -webkit-transition: all 0.4s ease;
+             -moz-transition: all 0.4s ease;
+               -o-transition: all 0.4s ease;
+                  transition: all 0.4s ease;
+
+          &:not(.disable) {
+            cursor: pointer;
+          }
+          &.today {
+            border: 1px solid $primaryColor;
+          }
+          &:hover:not(.disable)
+          {
+            background-color: #EFEFEF;
+          }
+          &.selected
+          {
+            background-color: $primaryColor !important;
+            color: $liteTextColor !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cdk-overlay-pane.jalaliPickerDialog
+{
+  width: 33rem !important;
+}

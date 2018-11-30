@@ -1,0 +1,10 @@
+<div class="monthBox" fxLayout="row wrap" fxLayoutAlign="space-around stretch">
+  <div class="month" *ngFor="let month of months; let i = index" [ngClass]="{'selected': i+1==selectedMonth, 'thisMonth': i+1==thisMonth}" (click)="selectMonth(i+1)" fxFlex="30%">{{month}}</div>
+</div>
+
+<div class="buttonBox padding" fxLayout="row" fxLayoutAlign="space-between center">
+  <span class="spacer"></span>
+  <button class="button gray" mat-button (click)="return()">
+    بازگشت
+  </button>
+</div>

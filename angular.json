@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "jalali-picker": {
+      "root": "projects/jalali-picker",
+      "sourceRoot": "projects/jalali-picker/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/jalali-picker/tsconfig.lib.json",
+            "project": "projects/jalali-picker/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/jalali-picker/src/test.ts",
+            "tsConfig": "projects/jalali-picker/tsconfig.spec.json",
+            "karmaConfig": "projects/jalali-picker/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/jalali-picker/tsconfig.lib.json",
+              "projects/jalali-picker/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-jalali-picker"

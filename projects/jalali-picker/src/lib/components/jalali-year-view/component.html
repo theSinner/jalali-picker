@@ -1,0 +1,21 @@
+<div class="buttonBox" fxLayout="row" fxLayoutAlign="center center">
+  <button class="button" mat-icon-button (click)="changePage(-1)" color="primary">
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </button>
+</div>
+<div class="yearBox" fxLayout="row wrap" fxLayoutAlign="space-around stretch">
+  <div class="year" *ngFor="let year of years; let i = index" [ngClass]="{'selected': year==selectedYear, 'thisYear': year==thisYear}" (click)="selectYear(year)" fxFlex="22%">{{year}}</div>
+</div>
+
+<div class="buttonBox" fxLayout="row" fxLayoutAlign="center center">
+  <button class="button" mat-icon-button (click)="changePage(+1)" color="primary">
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+</div>
+
+<div class="buttonBox padding" fxLayout="row" fxLayoutAlign="space-between center">
+  <span class="spacer"></span>
+  <button class="button gray" mat-button (click)="return()">
+    بازگشت
+  </button>
+</div>

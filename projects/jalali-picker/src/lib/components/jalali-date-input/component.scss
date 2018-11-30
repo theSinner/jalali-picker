@@ -1,0 +1,37 @@
+/*
+* @Author: Amir Ajorloo
+* @Date:   2018-11-22 14:22:10
+* @Last Modified by:   Amir Ajorloo
+* @Last Modified time: 2018-11-30 09:49:28
+*/
+
+
+$primaryColor : #49B4AF;
+$mainBackgroundColor: #F3F6F6;
+$liteBackgroundColor: #FFFFFF;
+
+$primaryTextColor : #677682;
+$secondaryTextColor : #757575;
+$tertiaryTextColor : #9E9E9E;
+$fourthTextColor : #C6C6D0;
+$liteTextColor: #FFFFFF;
+
+.inputButton
+{
+  border: 0!important;
+  padding: 0.2rem !important;
+  background: transparent !important;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.float
+{
+  position: absolute;
+  z-index: 10;
+}
+
+.pickerBox
+{
+  width: 25rem;
+}

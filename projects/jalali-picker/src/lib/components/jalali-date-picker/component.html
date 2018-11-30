@@ -1,0 +1,65 @@
+<div fxLayout="row" fxLayoutAlign="center stretch" style="direction: ltr !important;">
+  <div class="left" *ngIf="mode == 'horizontal'">
+    <h1 class="title">{{selectedDate | jalalify_text:'multiline'}}</h1>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center center" style="direction: ltr !important;">
+    <div class="datePickerBox" fxLayout="column" fxLayoutAlign="center stretch">
+      <div class="top" *ngIf="mode == 'vertical'">
+        <h1 class="title">{{selectedDate | jalalify_text}}</h1>
+      </div>
+      
+      <div class="containerBox" *ngIf="viewMode == 'day'">
+        <div class="buttonBox" fxLayout="row" fxLayoutAlign="space-between center">
+          <button class="button" mat-icon-button (click)="goNextMonth()">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+          <h3 class="title spacer">
+            <span (click)="showYearBox()" color="primary">{{selectedYear}}</span>
+            <span (click)="showMonthBox()" color="primary">{{persianMonths[selectedMonth]}}</span>
+          </h3>
+          <button class="button" mat-icon-button (click)="goPrevMonth()">
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+        <table>
+          <tr>
+            <th *ngFor="let dayLable of weekDaysLables['normal']">{{dayLable}}</th>
+          </tr>
+          <tr *ngFor="let week of monthBox">
+            <td *ngFor="let day of week">
+              <span [ngClass]="{'disable': !day['value'], 'selected': day['value']==selectedDate, 'today': day['value']==today}" (click)="selectDate(day)">
+                {{day.label}}
+              </span>
+            </td>
+          </tr>
+        </table>
+        <jalali-time-view *ngIf="timePicker"
+        [(selectedHour)]="selectedHour"
+        [(selectedMinute)]="selectedMinute"
+        [(selectedSecond)]="selectedSecond">
+        </jalali-time-view>
+        <div class="buttonBox padding" fxLayout="row" fxLayoutAlign="space-between center">
+          <button class="button gray" mat-button (click)="goToday()">
+            امروز
+          </button>
+          <span class="spacer"></span>
+          <button mat-button (click)="choose()" color="primary" *ngIf="!clickToChoose || timePicker">
+            انتخاب
+          </button>
+          <button mat-button (click)="close()" color="primary">
+            بستن
+          </button>
+        </div>
+      </div>
+
+      <jalali-month-view  *ngIf="viewMode == 'month'"
+                          [(selectedMonth)]="selectedMonth"
+                          (onChangeFunction)=dataChanged($event)></jalali-month-view>
+
+      <jalali-year-view  *ngIf="viewMode == 'year'"
+                          [(selectedYear)]="selectedYear"
+                          (onChangeFunction)=dataChanged($event)></jalali-year-view>
+
+    </div>
+  </div>
+</div>

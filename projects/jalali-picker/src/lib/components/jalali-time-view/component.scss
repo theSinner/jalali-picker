@@ -1,0 +1,72 @@
+/*
+* @Author: Amir Ajorloo
+* @Date:   2018-11-26 16:31:52
+* @Last Modified by:   Amir Ajorloo
+* @Last Modified time: 2018-11-29 10:25:52
+*/
+
+$primaryColor : #49B4AF;
+
+$mainBackgroundColor: #F3F6F6;
+$liteBackgroundColor: #FFFFFF;
+
+$primaryTextColor : #677682;
+$secondaryTextColor : #757575;
+$tertiaryTextColor : #9E9E9E;
+$fourthTextColor : #C6C6D0;
+$liteTextColor: #FFFFFF;
+
+
+.timePickerBox
+{
+  table
+  {
+    width: auto;
+    margin: 0rem auto;
+    td
+    {
+      text-align: center;
+    }
+
+    .button
+    {
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 0.3rem;
+      font-size: 1.5rem;
+      mat-icon
+      {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        line-height: 1.5rem !important;
+        font-size: 1.5rem !important;
+      }
+    }
+
+    input
+    {
+      outline: none;
+      border: 0px;
+      font-size: 1.3rem;
+      text-align: center;
+      width: 1.7rem;
+      height: 1.2rem;
+      line-height: 1.2rem;
+      color: $primaryTextColor;
+    }
+  }
+}
+
+/* For Firefox */
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+/* Webkit browsers like Safari and Chrome */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

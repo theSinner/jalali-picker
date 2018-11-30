@@ -1,0 +1,63 @@
+<div class="timePickerBox">
+  <table>
+    <tr>
+      <td>
+        <button class="button" mat-icon-button (click)="changeValue('hour', 1)" color="primary">
+          <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+      </td>
+      <td>
+      </td>
+      <td>
+        <button class="button" mat-icon-button (click)="changeValue('minute', 1)" color="primary">
+          <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+      </td>
+      <td>
+      </td>
+      <td>
+        <button class="button" mat-icon-button (click)="changeValue('second', 1)" color="primary">
+          <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="number" [(ngModel)]="selectedHour" (ngModelChange)="valueChanged('hour', $event)" min="0" max="23">
+      </td>
+      <td>
+      :
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="selectedMinute" (ngModelChange)="valueChanged('minute', $event)" min="0" max="59">
+      </td>
+      <td>
+      :
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="selectedSecond" (ngModelChange)="valueChanged('second', $event)" min="0" max="59">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="button" mat-icon-button (click)="changeValue('hour', -1)" color="primary">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+      </td>
+      <td>
+      </td>
+      <td>
+        <button class="button" mat-icon-button (click)="changeValue('minute', -1)" color="primary">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+      </td>
+      <td>
+      </td>
+      <td>
+        <button class="button" mat-icon-button (click)="changeValue('second', -1)" color="primary">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

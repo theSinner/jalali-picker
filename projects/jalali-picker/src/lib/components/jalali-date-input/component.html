@@ -1,0 +1,12 @@
+<div id="mainBox" #container>
+  <mat-form-field class="example-full-width" dir="rtl">
+    <input id="plate" matInput placeholder="{{placeholder}}" [(ngModel)]="dateToShow" [readonly]="true">
+    <button class="inputButton" mat-button matSuffix mat-icon-button (click)="showCalendar()">
+      <mat-icon>event</mat-icon>
+    </button>
+  </mat-form-field>
+  <div #floatBox class="pickerBox">
+    <jalali-date-picker [timePicker]="timePicker" [clickToChoose]="clickToChoose" *ngIf="!showDialog && openMode" [(selectedDate)]="value" (changeFunction)="onChange($event)" [close]="hideCalendar" [mode]="mode"></jalali-date-picker>  
+  </div>
+  
+</div>

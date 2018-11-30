@@ -1,0 +1,89 @@
+/*
+* @Author: Amir Ajorloo
+* @Date:   2018-11-26 11:27:48
+* @Last Modified by:   Amir Ajorloo
+* @Last Modified time: 2018-11-29 10:25:41
+*/
+
+$primaryColor : #49B4AF;
+
+$mainBackgroundColor: #F3F6F6;
+$liteBackgroundColor: #FFFFFF;
+
+$primaryTextColor : #677682;
+$secondaryTextColor : #757575;
+$tertiaryTextColor : #9E9E9E;
+$fourthTextColor : #C6C6D0;
+$liteTextColor: #FFFFFF;
+
+
+
+.monthBox
+{
+  padding: 1rem;
+  .month
+  {
+    padding: 0.5rem 0.8rem;
+    border: 2px solid #CFCFCF;
+    margin: 0.3rem 0rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 0.4s ease;
+       -moz-transition: all 0.4s ease;
+         -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+
+    &.thisMonth {
+      border: 2px solid $primaryColor;
+    }
+    &:hover:not(.disable)
+    {
+      background-color: #EFEFEF;
+    }
+    &.selected
+    {
+      background-color: $primaryColor !important;
+      color: $liteTextColor !important;
+      border: 2px solid $primaryColor !important;
+    }
+  }
+
+}
+
+
+.buttonBox
+{
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+
+  &.padding
+  {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .button
+  {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    &.gray
+    {
+      color: $primaryTextColor;
+    }
+  }
+  .title
+  {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+
+    span
+    {
+      color: $primaryColor;
+      cursor: pointer;
+      margin-left: 0.4rem;
+      margin-right: 0.4rem;
+    }
+  }
+}
